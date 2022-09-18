@@ -84,6 +84,10 @@ body {
 
 /* Site nav */
 
+.page-header {
+  border-bottom: 1px solid var(--header-border-color);
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -352,6 +356,7 @@ img {
   display: flex;
   margin-top: 16px;
   justify-content: center;
+  gap: 10px;
 }
 
 .social-list .link {
@@ -399,20 +404,21 @@ img {
 
 .clients-list .link:hover,
 .clients-list .link:focus {
-  border: 1px solid var(--accent-color);
+  border-color: var(--accent-color);
   fill: var(--accent-color);
 }
 
 /* Футер */
 
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--bcg-color);
 }
 
 .footer .container {
   display: flex;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  align-items: baseline;
 }
 
 .address {
@@ -432,6 +438,11 @@ img {
   margin-top: 9px;
 }
 
+.address .link:hover,
+.address .link:focus {
+  color: var(--accent-color);
+}
+
 .address .map {
   color: var(--primary-white-color);
 }
@@ -442,7 +453,6 @@ img {
 
 .social-list-tittle {
   margin: 0;
-  margin-top: 12px;
   color: var(--primary-white-color);
   font-weight: 700;
   line-height: 1.14;
@@ -497,9 +507,15 @@ img {
   gap: 30px;
 }
 
-.project-list .item:hover {
+.project-link {
+  display: block;
+  text-decoration: none;
+}
+
+.project-link:hover,
+.project-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+      1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-list .description {
